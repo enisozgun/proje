@@ -7,21 +7,12 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+
+function Login() {
   
-  async function Login() {
-    const parameters = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
-    };
-    let result = await fetch("https://smapi.eu-west-3.elasticbeanstalk.com/user/token", parameters)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
-      
-      
-  }
+}
+  
+
 
   return (
     <>

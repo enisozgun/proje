@@ -9,9 +9,9 @@ function Header() {
           <Navbar.Brand href="#home">School App</Navbar.Brand>
           <Nav className="me-auto navbar_wrapper">
            
-                <Link to="/main">Main</Link>
+                <Link to="/">Main</Link>
              
-                <Link to="/">Login</Link>
+                <Link to="/login">Login</Link>
      
             
           </Nav>
