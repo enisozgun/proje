@@ -5,7 +5,6 @@ import Header from "./Header";
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -25,7 +24,6 @@ function LoginPage() {
           const message = data.message;
           if (message === "Username or password is incorrect") {
             alert("Invalid credentials")
-            setIsValid(true);
             setIsLoading(true);
           } else {
             if (data.roleName === "SYSADMIN") {
@@ -41,7 +39,7 @@ function LoginPage() {
         }
       });
   }, [isLoading]);
-  function SubmitHandler(event) {
+   function SubmitHandler(event) {
     event.preventDefault();
     setIsLoading(false);
   }
