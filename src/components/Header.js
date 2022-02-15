@@ -9,9 +9,9 @@ function Header() {
         <Container>
           <Navbar.Brand href="#home">School App</Navbar.Brand>
           <Nav className="me-auto navbar_wrapper">
-            {currentPage === "/login" ? (
+            {currentPage === "/" ? (
               <>
-                <Link to="/login">Login</Link>
+                <Link to="/">Login</Link>
               </>
             ) : (
               <>
