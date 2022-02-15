@@ -15,7 +15,7 @@ function Header() {
               </>
             ) : (
               <>
-                <Link to="/login">Log out</Link>
+                <Link to="/">Log out</Link>
                 <Link to="/admin">Admin</Link>
               </>
             )}
