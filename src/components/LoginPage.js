@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import UserContext from "../store/UserContext";
 import Header from "./Header";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const userContext=useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,6 +28,7 @@ function LoginPage() {
             alert("Invalid credentials")
             setIsLoading(true);
           } else {
+            userContext.login(data)
             if (data.roleName === "SYSADMIN") {
               navigate("/admin");
             } else if (data.roleName === "MANAGER") {
