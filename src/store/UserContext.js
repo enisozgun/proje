@@ -36,7 +36,15 @@ export function UserContextProvider(props) {
   }
 
   function logout() {
-    setUser(null);
+    setUser({
+      firstName: "",
+      id: null,
+      lastName: "",
+      roleId: null,
+      roleName: "",
+      token: "",
+      username: "",
+    });
   }
 
   return (

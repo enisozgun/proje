@@ -20,6 +20,7 @@ function Header() {
               <></>
             ) : (
               <>
+                <Link to="/admin">Admin</Link>
                 <Link to="/users">Users</Link>
                 <Link to="/teachers">Teachers</Link>
                 <Link to="/students">Students</Link>
