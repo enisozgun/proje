@@ -25,22 +25,23 @@ function Header() {
       return (
         <>
           <Link to="/profile">Profile</Link>
-          <Link to="/teachers">Teachers</Link>
-          <Link to="/students">Students</Link>
+          <Link to="/manager-teachers">Teachers</Link>
+          <Link to="/manager-students">Students</Link>
         </>
       );
     } else if (user.user.roleName === "STUDENT") {
       return (
         <>
           <Link to="/profile">Profile</Link>
-          <Link to="/lessons">Lessons</Link>
+          <Link to="/student-lessons">Lessons</Link>
+          <Link to="/student-my-lessons">My Lessons</Link>
         </>
       );
     } else if (user.user.roleName === "TEACHER") {
       return (
         <>
           <Link to="/profile">Profile</Link>
-          <Link to="/lessons">Lessons</Link>
+          <Link to="/teacher-lessons">Lessons</Link>
         </>
       );
     }

@@ -1,7 +1,8 @@
 import { useState, useContext, useEffect } from "react";
-import UserContext from "../store/UserContext";
+import UserContext from "../../store/UserContext";
 import { useNavigate } from "react-router";
-import Header from "../components/Header";
+import Header from "../../components/Header";
+import { Table } from 'react-bootstrap';
 
 function AddUser() {
   const navigate = useNavigate();
@@ -89,7 +90,7 @@ function AddUser() {
         <br />
         <div>
           <input
-            placeholder="username"
+            placeholder="name"
             id="username"
             required
             type="text"
@@ -100,7 +101,7 @@ function AddUser() {
         <br />
         <div>
           <input
-            placeholder="password"
+            placeholder="subject"
             id="password"
             required
             type="text"
