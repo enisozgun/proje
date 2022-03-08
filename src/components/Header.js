@@ -8,26 +8,51 @@ function Header() {
   const navigate = useNavigate();
   function Logout() {
     user.logout();
-    navigate("/");    
+    navigate("/");
   }
+  function Decider() {
+    if (user.user.roleName === "SYSADMIN") {
+      return (
+        <>
+          <Link to="/profile">Profile</Link>
+          <Link to="/users">Users</Link>
+          <Link to="/teachers">Teachers</Link>
+          <Link to="/students">Students</Link>
+          <Link to="/lessons">Lessons</Link>
+        </>
+      );
+    } else if (user.user.roleName === "MANAGER") {
+      return (
+        <>
+          <Link to="/profile">Profile</Link>
+          <Link to="/teachers">Teachers</Link>
+          <Link to="/students">Students</Link>
+        </>
+      );
+    } else if (user.user.roleName === "STUDENT") {
+      return (
+        <>
+          <Link to="/profile">Profile</Link>
+          <Link to="/lessons">Lessons</Link>
+        </>
+      );
+    } else if (user.user.roleName === "TEACHER") {
+      return (
+        <>
+          <Link to="/profile">Profile</Link>
+          <Link to="/lessons">Lessons</Link>
+        </>
+      );
+    }
+  }
+  const header = Decider();
+
   return (
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">School App</Navbar.Brand>
-          <Nav className="me-auto navbar_wrapper">
-            {user.user.roleId == null ? (
-              <></>
-            ) : (
-              <>
-                <Link to="/admin">Admin</Link>
-                <Link to="/users">Users</Link>
-                <Link to="/teachers">Teachers</Link>
-                <Link to="/students">Students</Link>
-                <Link to="/lessons">Lessons</Link>
-              </>
-            )}
-          </Nav>
+          <Navbar.Brand>School App</Navbar.Brand>
+          <Nav className="me-auto navbar_wrapper">{header}</Nav>
           {user.user.id != null ? (
             <Nav>
               <NavDropdown title={user.user && user.user.firstName}>

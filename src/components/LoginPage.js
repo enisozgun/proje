@@ -29,14 +29,8 @@ function LoginPage() {
             setIsLoading(true);
           } else {
             userContext.login(data)
-            if (data.roleName === "SYSADMIN") {
-              navigate("/admin");
-            } else if (data.roleName === "MANAGER") {
-              navigate("/admin");
-            } else if (data.roleName === "TEACHER") {
-              navigate("/admin");
-            } else if (data.roleName === "STUDENT") {
-              navigate("/admin");
+            if (data.roleId != null) {
+              navigate("/profile");
             }
           }
         }

@@ -1,16 +1,27 @@
 import { useContext } from "react";
 import Header from "./Header";
 import UserContext from "../store/UserContext";
+import { Table } from "react-bootstrap";
 
-function Admin() {
-  const user = useContext(UserContext)
+function Profile() {
+  const user = useContext(UserContext);
 
   return (
     <div>
       <Header />
-      {user.user.firstName}
+      <div className="col-sm-8 offset-sm-20">
+        <Table striped bordered hover>
+            <tr>
+              <tr>{"ID: " + user.user.id}</tr>
+              <tr>{"Username: " + user.user.username}</tr>
+              <tr>{"First Name: " + user.user.firstName}</tr>
+              <tr>{"Last Name: " + user.user.lastName}</tr>
+              <tr>{"Role Name: " + user.user.roleName}</tr>
+            </tr>
+        </Table>
+      </div>
     </div>
   );
 }
 
-export default Admin;
+export default Profile;
