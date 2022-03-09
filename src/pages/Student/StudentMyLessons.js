@@ -40,7 +40,7 @@ function StudentMyLessons() {
           currentUser.user.id +
           "/lesson" +
           "/" +
-          currentUser.user.id,
+          deleteId,
         {
           method: "DELETE",
           headers: {

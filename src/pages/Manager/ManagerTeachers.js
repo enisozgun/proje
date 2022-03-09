@@ -77,7 +77,7 @@ function ManagerTeachers() {
                 <td>{user.schoolAdress}</td>
                 <td>
                   <button
-                    onClick={() => {setDeleteID(user.id)}}
+                    onClick={() => {setDeleteID(user.teacherId)}}
                     className="btn btn-light"
                   >
                     Delete

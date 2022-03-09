@@ -18,7 +18,7 @@ function TypeItemListStudent(props) {
           <TypeItemStudent
             setIsExecute={props.setIsExecute}
             typeItem={item}
-            setTakeCourseId={props.setTakeCourseId}
+            setTakeLessonId={props.setTakeLessonId}
             courseContext={props.courseContext}
           />
         ))}</tbody>         

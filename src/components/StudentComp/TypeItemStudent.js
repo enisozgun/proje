@@ -2,14 +2,14 @@ import {useEffect,useState} from 'react';
 
 function TypeItemStudent(props){
 
-    const takeCourseId=Object.values(props.typeItem)[0];
+    const takeLessonId=Object.values(props.typeItem)[0];
     const [isValid,setIsValid]=useState(true);
     
     useEffect(()=>{
 
         props.courseContext.lessonIds.forEach(element => {
-            if(element.id===takeCourseId){
-                console.log(takeCourseId)
+            if(element.id===takeLessonId){
+                console.log(takeLessonId)
 
                 setIsValid(false);
             }
@@ -20,7 +20,7 @@ function TypeItemStudent(props){
     function buttonClickHandler(){
         props.courseContext.addLesson(props.typeItem);
         props.setIsExecute(true);
-        props.setTakeCourseId(takeCourseId);
+        props.setTakeLessonId(takeLessonId);
         setIsValid(false);
     }
 

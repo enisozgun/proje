@@ -83,7 +83,7 @@ function ManagerStudents() {
                 <td>
                   <button
                     onClick={() => {
-                      setDeleteID(user.id);
+                      setDeleteID(user.studentId);
                     }}
                     className="btn btn-light"
                   >

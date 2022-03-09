@@ -90,7 +90,7 @@ function AddUser() {
         <br />
         <div>
           <input
-            placeholder="name"
+            placeholder="username"
             id="username"
             required
             type="text"
@@ -101,7 +101,7 @@ function AddUser() {
         <br />
         <div>
           <input
-            placeholder="subject"
+            placeholder="password"
             id="password"
             required
             type="text"
@@ -113,7 +113,7 @@ function AddUser() {
         <div>
           <input
             placeholder="name"
-            id="surname"
+            id="name"
             required
             type="text"
             onChange={(e) => setName(e.target.value)}
