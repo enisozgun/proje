@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import UserContext from "../store/UserContext";
+import UserContext from "../storage/UserContext";
 import Header from "./Header";
 
 function LoginPage() {

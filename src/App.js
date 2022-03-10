@@ -18,7 +18,7 @@ import TeacherLessons from "./pages/Teacher/TeacherLessons";
 import AddLessonTeacher from "./pages/Teacher/AddLessonTeacher";
 import StudentLessons from "./pages/Student/StudentLessons";
 import StudentMyLessons from "./pages/Student/StudentMyLessons";
-import UserContext from "./store/UserContext";
+import UserContext from "./storage/UserContext";
 import { useContext } from "react";
 
 function App() {

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import UserContext from "../../store/UserContext";
-import CourseContext from "../../store/CourseContext";
+import UserContext from "../../storage/UserContext";
+import CourseContext from "../../storage/CourseContext";
 import Header from "../../components/Header";
 import TypeItemListStudent from "../../components/StudentComp/TypeItemListStudent";
 

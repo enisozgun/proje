@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Header from "../../components/Header";
-import UserContext from "../../store/UserContext";
+import UserContext from "../../storage/UserContext";
 import { Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 

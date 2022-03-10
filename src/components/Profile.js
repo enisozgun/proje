@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Header from "./Header";
-import UserContext from "../store/UserContext";
+import UserContext from "../storage/UserContext";
 import { Table } from "react-bootstrap";
 
 function Profile() {

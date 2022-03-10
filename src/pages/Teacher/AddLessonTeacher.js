@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import UserContext from "../../store/UserContext";
+import UserContext from "../../storage/UserContext";
 import { useNavigate } from "react-router";
 import Header from "../../components/Header";
 

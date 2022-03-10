@@ -1,5 +1,5 @@
-import UserContext from "../../store/UserContext";
-import CourseContext from "../../store/CourseContext";
+import UserContext from "../../storage/UserContext";
+import CourseContext from "../../storage/CourseContext";
 import { useEffect, useState, useContext } from "react";
 import Header from "../../components/Header";
 import { Table } from "react-bootstrap";

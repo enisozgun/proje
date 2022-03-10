@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import UserContext from "../../store/UserContext";
+import UserContext from "../../storage/UserContext";
 
 function AddTeacherManager() {
   const navigate = useNavigate();

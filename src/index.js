@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { UserContextProvider } from "./store/UserContext";
+import { UserContextProvider } from "./storage/UserContext";
 import { BrowserRouter } from "react-router-dom";
-import { CourseContextProvider } from "./store/CourseContext";
+import { CourseContextProvider } from "./storage/CourseContext";
 
 ReactDOM.render(
   <CourseContextProvider>

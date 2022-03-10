@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import UserContext from "../store/UserContext";
+import UserContext from "../storage/UserContext";
 
 function Header() {
   const user = useContext(UserContext);
